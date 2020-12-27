@@ -18,7 +18,7 @@ parse_songs = function(raw_text) {
     one_number_one_dot = "^\\d\\.",
     one_special_char_one_comma = ".,",
     hashtag = "^#",
-    one_special_char = "^."
+    one_special_char = "^æ|^«"
   )
   regex_pattern = paste(start_line_patterns, collapse = "|")
 

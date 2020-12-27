@@ -3,8 +3,7 @@ Pauvre Rutebeuf
 L'Île Saint-Louis
 L'affiche Rouge
 Le Flamenco De Paris
-Les Cloches
-Notre-Dame
+Les Cloches De Notre-Dame
 Merde À Vauban
 E.P. Love
 Chanson Mecanisée
@@ -18,5 +17,4 @@ Brumes Et Pluies
 Le Léthé
 Le Revenant
 La Pipe
-Les Métamorphoses
-Vampire
+Les Métamorphoses Du Vampire
