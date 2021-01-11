@@ -1,6 +1,8 @@
 
 library(tesseract)
-library(tidyverse)
+suppressPackageStartupMessages(
+  library(tidyverse)
+)
 
 parse_songs = function(raw_text) {
 
@@ -40,14 +42,18 @@ parse_songs = function(raw_text) {
 
 }
 
+### Main
+
 image_files = list.files(path = "pictures",
                          pattern = "cd\\d\\.png",
                          full.names = TRUE)
 
+# Perform OCR on picture of song lists
 language = tesseract("fra")
 l_raw_text = map(image_files, ~ ocr(image = .x, engine = language))
 names(l_raw_text) = str_remove(basename(image_files), "\\.png$")
 
+# Parse song title form raw text
 l_songs = map(l_raw_text, parse_songs)
 
 # Manual corrections
@@ -55,6 +61,7 @@ l_songs$cd1 = str_replace(l_songs$cd1, "LaVie", "La Vie")
 l_songs$cd2 = str_replace(l_songs$cd2, "CaT", "Ca T")
 l_songs$cd4 = str_replace(l_songs$cd4, "Tes", "T'es")
 
+# Save songs titles per cd
 walk2(l_songs,  names(l_songs),
       function(songs, cd) {
         writeLines(text = songs,
