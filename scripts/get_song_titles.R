@@ -1,8 +1,7 @@
 
 library(tesseract)
-suppressPackageStartupMessages(
-  library(tidyverse)
-)
+library(stringr)
+library(purrr)
 
 parse_songs = function(raw_text) {
 
