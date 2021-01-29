@@ -4,4 +4,6 @@ sudo apt install tesseract-ocr
 To install a specific language:
 sudo apt install tesseract-pcr-ISO
 where ISO represents the three-letter abbreviation for a given language.
-For a list of those abbreviations see: man tesseract
+For a list of those abbreviations see: man tesseract.
+In our case:
+sudo apt install tesseract-pcr-fra
